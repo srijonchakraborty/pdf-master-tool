@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0f1115;
+    --bg-secondary: #171a21;
+    --bg-elevated: #1f232c;
+    --border-subtle: #2a2f3a;
+    --text-primary: #f4f5f7;
+    --text-secondary: #9aa1ac;
+    --accent: #6d5bff;
+    --accent-hover: #8172ff;
+    --success: #2fd170;
+    --warning: #f5a524;
+    --danger: #f5455c;
+  }
+
+  /* Optional: Light mode overrides if we add toggle later */
+  .light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f5f7;
+    --bg-elevated: #e6e8eb;
+    --border-subtle: #d1d5db;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}

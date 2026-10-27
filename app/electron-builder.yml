@@ -1,0 +1,60 @@
+appId: com.vibecode.pdftoolkit
+productName: PDF Master Toolkit
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!{gs.exe,gs_installer.exe,fix.js,listen.js,scripts/**,gs_temp/**}'
+asarUnpack:
+  - resources/**
+win:
+  executableName: PDFMaster
+  icon: build/icon.ico
+  target:
+    - appx
+    - portable
+    - nsis
+appx:
+  applicationId: PDFMasterToolkit
+  # For Microsoft Store release: replace identityName, publisher, and publisherDisplayName
+  # with the values from Microsoft Partner Center -> Product management -> Product Identity
+  identityName: PDFMasterToolkit
+  publisher: CN=PDFMasterToolkit
+  publisherDisplayName: PDF Master
+  displayName: PDF Master Toolkit
+  artifactName: ${name}-${version}.${ext}
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+portable:
+  artifactName: ${name}-${version}-portable.${ext}
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://example.com/auto-updates

@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# Build and package output
+dist/
+out/
+release/
+*.blockmap
+*.exe
+*.appx
+*.msix
+*.msi
+
+# Local Ghostscript download/extract (see app/scripts/install-gs.js)
+gs_temp/
+gs.exe
+gs_installer.exe
+
+# One-off local scripts
+fix.js
+listen.js
+
+# Caches and logs
+.eslintcache
+*.tsbuildinfo
+.vite/
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.p12
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.idea/

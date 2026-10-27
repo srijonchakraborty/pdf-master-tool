@@ -1,0 +1,1 @@
+Explicitly ignore build folders (dist/, node_modules/, logs/) so Claude never indexes them into the active token 
