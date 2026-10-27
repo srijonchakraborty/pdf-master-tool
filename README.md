@@ -9,6 +9,11 @@ Specs and feature status live in `PROJECT_PLAN.md` and `PROGRESS.md`. Per-tool n
 <img width="1751" height="1039" alt="image" src="https://github.com/user-attachments/assets/1f8d49f9-f1e2-4bbc-8f31-c48be542e9b2" />
 <img width="1638" height="1049" alt="image" src="https://github.com/user-attachments/assets/a72a7ab8-0c07-425d-b63d-18b342397a8a" />
 
+## Note
+
+This build is for the Windows desktop. You can configure it and keep developing for Linux or other platforms with an AI coding agent.
+
+I built this app with AI over about 20 hours of prompting, using a workflow with multiple sub-agents.
 
 ## Stack
 
